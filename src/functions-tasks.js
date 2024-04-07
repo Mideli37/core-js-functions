@@ -88,7 +88,8 @@ function getPowerFunction(exponent) {
  *   getPolynom()      => null
  */
 function getPolynom(...args) {
-  const reversedArr = args.toReversed();
+  const reversedArr = args.slice();
+  reversedArr.reverse();
   return (x) => {
     let result = 0;
     reversedArr.forEach((number, i) => {
